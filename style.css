@@ -1,0 +1,129 @@
+html, body, .scene {
+    margin: 0;
+    height: 100%;
+    background-color: lightcoral;
+    background-image: linear-gradient(
+      to bottom,
+      lightskyblue 70%,
+      lightgray 70%,
+      lightgray 71%,
+      grey 71%
+    );
+    overflow: hidden;
+    filter: url(#blur);
+  }
+  
+  .slash-container {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    perspective: 100px;
+  }
+  
+  #slash {
+    width: 400px;
+    bottom: 10%;
+    left: 50%;
+    transform: translate3d(-50%, 0, -10px);
+    position: absolute;
+  }
+  
+  .dust-container {
+    width: 70%;
+    height: 100%;
+    bottom: calc(10% + 30px);
+    left: calc(50% + 40px);
+    transform: translateZ(-10px);
+    position: absolute;
+    overflow: hidden;
+  }
+  
+  .dust {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    left: 0;
+    bottom: -10px;
+    position: absolute;
+    background-color: lightgrey;
+    transform: scale(1);
+  }
+  
+  .shock {
+    width: 400px;
+    height: 400px;
+    bottom: 15%;
+    left: 53%;
+    position: absolute;
+    border: 3px solid rgb(254, 255, 222);
+    border-radius: 50%;
+    transform: translate(-50%, 0);
+    opacity: 0;
+    filter: url(#wave);
+  }
+  
+  .thunder {
+    width: 100%;
+    height: 15px;
+    padding: 50px;
+    position: absolute;
+    filter: url(#turbulence);
+    overflow: hidden;
+  }
+  
+  .thunder .bg {
+    width: 100%;
+    height: 100%;
+    background-color: rgb(143, 244, 255);
+    transform: translateX(-110%);
+  }
+  
+  .thunder.one:nth-child(1) {
+    top: 65%;
+    left: 40%;
+    transform: rotateZ(-135deg);
+    transform-origin: top left;
+  }
+  .thunder.one:nth-child(2) {
+    top: 50%;
+    left: 55%;
+    transform: rotateZ(-45deg);
+    transform-origin: top left;
+  }
+  .thunder.one:nth-child(3) {
+    top: 80%;
+    left: 55%;
+    transform: rotateZ(145deg);
+    transform-origin: top left;
+  }
+  .thunder.one:nth-child(4) {
+    top: 70%;
+    left: 60%;
+    transform: rotateZ(35deg);
+    transform-origin: top left;
+  }
+  
+  .thunder.two:nth-child(1) {
+    top: 50%;
+    left: 45%;
+    transform: rotateZ(-120deg);
+    transform-origin: top left;
+  }
+  .thunder.two:nth-child(2) {
+    top: 60%;
+    left: 55%;
+    transform: rotateZ(-20deg);
+    transform-origin: top left;
+  }
+  .thunder.two:nth-child(3) {
+    top: 75%;
+    left: 60%;
+    transform: rotateZ(80deg);
+    transform-origin: top left;
+  }
+  .thunder.two:nth-child(4) {
+    top: 75%;
+    left: 45%;
+    transform: rotateZ(-200deg);
+    transform-origin: top left;
+  }
